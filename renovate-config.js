@@ -6,15 +6,16 @@ module.exports = {
         // "Gepardec/renovate-angular-playground"
     ],
     prHourlyLimit: 0,
-    postUpgradeTasks: {
+    /*postUpgradeTasks: {
         commands: ["/github-action/quarkus-update {{branchName}} {{currentVersion}} {{newVersion}} {{newMajor}}.{{newMinor}} {{platform}} {{repository}}"],
-        fileFilters: ["**/*", "**/.*"],
+        fileFilters: ["** /*", "** /.*"],
         executionMode: "branch"
     },
     allowedPostUpgradeCommands: [
         "^/github-action/quarkus-update {{branchName}} {{currentVersion}} {{newVersion}} {{newMajor}}.{{newMinor}} {{platform}} {{repository}}$",
         "^npm ci --ignore-scripts$",
         "^npx ng update {{{depName}}} --from={{{currentVersion}}} --to={{{newVersion}}} --migrate-only --allow-dirty --force$"
-    ],
-    recreateWhen: "always"
+    ],*/
+    recreateWhen: "always",
+    branchTopic: "{{{depNameSanitized}}}_{{currentVersion}}_{{newVersion}}{{#if separateMinorPatch}}{{#if isPatch}}.{{{newMinor}}}{{/if}}{{/if}}.x{{#if isLockfileUpdate}}-lockfile{{/if}}"
 }
