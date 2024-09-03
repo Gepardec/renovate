@@ -19,6 +19,7 @@ module.exports = {
     recreateWhen: "always",
     packageRules: [
         {
+            groupName: "{{depNameSanitized}}",
             groupSlug: "{{depNameSanitized}}#{{currentVersion}}#{{newVersion}}"
         }
     ],
