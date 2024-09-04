@@ -19,7 +19,7 @@ module.exports = {
     recreateWhen: "always",
     packageRules: [
         {
-            groupName: "{{depNameSanitized}}",
+            matchPackageNames: "io.quarkus.platform*",
             groupSlug: "{{depNameSanitized}}#{{currentVersion}}#{{newVersion}}"
         }
     ],
