@@ -17,11 +17,10 @@ module.exports = {
         "^npx ng update {{{depName}}} --from={{{currentVersion}}} --to={{{newVersion}}} --migrate-only --allow-dirty --force$"
     ],*/
     recreateWhen: "always",
-    packageRules: [
+    "packageRules": [
         {
-            matchPackageNames: ["io.quarkus.platform**"],
-            groupName: "quarkus.platform.version",
-            groupSlug: "{{depNameSanitized}}#{{currentVersion}}#{{newVersion}}"
+            "groupName": "devDependencies (non-major)",
+            "groupSlug": "dev-dependencies"
         }
     ],
     branchTopic: "{{{depNameSanitized}}}#{{currentVersion}}#{{newVersion}}{{#if separateMinorPatch}}{{#if isPatch}}.{{{newMinor}}}{{/if}}{{/if}}.x{{#if isLockfileUpdate}}-lockfile{{/if}}"
