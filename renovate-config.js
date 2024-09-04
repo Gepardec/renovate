@@ -17,8 +17,9 @@ module.exports = {
         "^npx ng update {{{depName}}} --from={{{currentVersion}}} --to={{{newVersion}}} --migrate-only --allow-dirty --force$"
     ],*/
     recreateWhen: "always",
-    "packageRules": [
+    packageRules: [
         {
+            "matchUpdateTypes": ["*"],
             "groupName": "devDependencies (non-major)",
             "groupSlug": "dev-dependencies"
         }
