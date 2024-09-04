@@ -20,7 +20,8 @@ module.exports = {
     packageRules: [
         {
             matchPackageNames: ["io.quarkus.platform**"],
-            groupName: "blubb"
+            groupName: "quarkus.platform.version",
+            groupSlug: "{{{depNameSanitized}}#{{{currentVersion}}}#{{{newVersion}}}"
         }
     ],
     branchTopic: "{{{depNameSanitized}}}#{{currentVersion}}#{{newVersion}}{{#if separateMinorPatch}}{{#if isPatch}}.{{{newMinor}}}{{/if}}{{/if}}.x{{#if isLockfileUpdate}}-lockfile{{/if}}"
