@@ -25,4 +25,4 @@ jobs:
           docker-volumes: |
             /home/runner/work/renovate/renovate/quarkus-update:/github-action/quarkus-update
         env:
-          LOG_LEVEL: trace
+          LOG_LEVEL: debug
