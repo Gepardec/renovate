@@ -19,7 +19,7 @@ module.exports = {
     recreateWhen: "always",
     packageRules: [
         {
-            matchDatasources: ["maven"],
+            matchDatasources: ["io.quarkus.platform**"],
             groupName: "quarkus.platform.version",
             groupSlug: "{{depNameSanitized}}#{{currentVersion}}#{{newVersion}}"
         }
