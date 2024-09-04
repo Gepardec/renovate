@@ -20,6 +20,7 @@ module.exports = {
     packageRules: [
         {
             matchPackageNames: "io.quarkus.platform*",
+            groupName: "quarkus",
             groupSlug: "{{depNameSanitized}}#{{currentVersion}}#{{newVersion}}"
         }
     ],
