@@ -19,9 +19,9 @@ module.exports = {
     recreateWhen: "always",
     packageRules: [
         {
-            matchPackageNames: "io.quarkus.platform*",
+            matchPackageNames: ["io.quarkus.platform*"],
             groupName: "quarkus.platform.version",
-            groupSlug: "changed"
+            groupSlug: "{{depNameSanitized}}#{{currentVersion}}#{{newVersion}}"
         }
     ],
     branchTopic: "{{{depNameSanitized}}}#{{currentVersion}}#{{newVersion}}{{#if separateMinorPatch}}{{#if isPatch}}.{{{newMinor}}}{{/if}}{{/if}}.x{{#if isLockfileUpdate}}-lockfile{{/if}}"
