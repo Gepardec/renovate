@@ -23,6 +23,6 @@ jobs:
           token: ${{ secrets.RENOVATE_TOKEN }}
           configurationFile: renovate-config.js
           docker-volumes: |
-            /home/runner/work/renovate/renovate/quarkus-update:/github-action/quarkus-update
+            /home/runner/work/renovate/renovate/write-update-info.sh:/github-action/write-update-info.sh
         env:
           LOG_LEVEL: debug
