@@ -7,12 +7,12 @@ module.exports = {
     ],
     prHourlyLimit: 0,
     postUpgradeTasks: {
-        commands: ["/github-action/write-update-info.sh {{platform}} {{repository}} {{depNameSanitized}} {{currentVersion}} {{newVersion}}"],
+        commands: ["/github-action/write-update-info.sh {{platform}} {{repository}} {{groupName}} {{currentVersion}} {{newVersion}}"],
         fileFilters: ["**/*"],
         executionMode: "branch"
     },
     allowedPostUpgradeCommands: [
-        "^/github-action/write-update-info.sh {{platform}} {{repository}} {{depNameSanitized}} {{currentVersion}} {{newVersion}}$"
+        "^/github-action/write-update-info.sh {{platform}} {{repository}} {{groupName}} {{currentVersion}} {{newVersion}}$"
     ],
     /*postUpgradeTasks: {
         commands: ["/github-action/quarkus-update {{branchName}} {{currentVersion}} {{newVersion}} {{newMajor}}.{{newMinor}} {{platform}} {{repository}}"],
