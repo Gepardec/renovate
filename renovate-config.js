@@ -8,7 +8,7 @@ module.exports = {
     prHourlyLimit: 0,
     postUpgradeTasks: {
         commands: ["/github-action/write-update-info.sh {{platform}} {{repository}} {{depNameSanitized}} {{currentVersion}} {{newVersion}}"],
-        fileFilters: ["update-info.txt"],
+        fileFilters: ["**/*"],
         executionMode: "branch"
     },
     allowedPostUpgradeCommands: [
