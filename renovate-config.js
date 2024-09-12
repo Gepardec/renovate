@@ -10,7 +10,7 @@ module.exports = {
         {
             matchPackagePrefixes: ["io.quarkus"],
             groupName: "quarkus",
-            groupSlug: "quarkus#{{currentVersion}}#{{newVersion}}"
+            groupSlug: "quarkus_{{currentVersion}}_{{newVersion}}"
         },
     ],
     recreateWhen: "always"
