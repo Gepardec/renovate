@@ -4,25 +4,27 @@ participant Developer
 
 participant Renovate
 
-Renovate -> OpenRewrite : recognizes new Version and executes OpenRewrite
+Renovate -> "Git Repository" : recognizes new Version and creates Pull Request
 activate Renovate
+activate "Git Repository"
+deactivate Renovate
+
+"Git Repository" -> Pipeline : new branch triggers Pipeline
+activate Pipeline
+
+Pipeline -> OpenRewrite : Pipeline runs OpenRewrite
 activate OpenRewrite
 
-OpenRewrite --> Renovate : makes code changes
+OpenRewrite -> Pipeline : makes code changes
 deactivate OpenRewrite
 
-Renovate -> "Git Repository" : pushes code changes and creates Pull Request
-deactivate Renovate
-activate "Git Repository"
+Pipeline -> "Git Repository" : creates Pull Request
 
-"Git Repository" -> "Build-Pipeline" : git push triggers Build-Pipeline
+"Git Repository" -> Pipeline : Pull Request triggers Pipeline
 
-activate "Build-Pipeline"
-"Build-Pipeline" --> "Build-Pipeline" : successful
-"Build-Pipeline" --> "Git Repository" :
-deactivate "Build-Pipeline"
+Pipeline -> "Git Repository" : successful
 
-Developer -> "Git Repository" : Developer merges Pull Request
+"Developer" -> "Git Repository" : Developer merges Pull Request
 deactivate "Git Repository"
 activate Developer
 deactivate Developer
