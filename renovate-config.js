@@ -6,7 +6,7 @@ module.exports = {
         // "Gepardec/renovate-playground"
     ],
     prHourlyLimit: 0,
-    separateMajorMinor: false,
+    //separateMajorMinor: false,
     packageRules: [
         {
             matchPackagePrefixes: ["io.quarkus"],
