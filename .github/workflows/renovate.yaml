@@ -20,7 +20,7 @@ jobs:
         with:
           renovate-image: ghcr.io/gepardec/gepardec-renovate
           renovate-version: main-8b03812
-          token: ${{ secrets.RENOVATE_TOKEN }}
+          token: ${{ secrets.RENOVATE_TOKEN_ANGULAR }}
           configurationFile: renovate-config.js
           docker-volumes: |
             /home/runner/work/renovate/renovate/write-update-info.sh:/github-action/write-update-info.sh
