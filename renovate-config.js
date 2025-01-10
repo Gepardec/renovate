@@ -8,8 +8,9 @@ module.exports = {
     separateMajorMinor: false,
     packageRules: [
         {
-            matchPackagePrefixes: ["@angular/**"],
-            groupName: "angular",
+            matchDatasources: ["npm"],
+            matchPackageNames: ["/^angular/"],
+            groupName: "Angular",
             groupSlug: "angular_{{currentVersion}}_{{newVersion}}"
         },
     ],
