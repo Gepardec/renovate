@@ -9,7 +9,7 @@ module.exports = {
     packageRules: [
         {
             matchDatasources: ["npm"],
-            matchPackageNames: ["/^angular/"],
+            matchPackageNames: ["@angular/**"],
             groupName: "Angular",
             groupSlug: "angular_{{currentVersion}}_{{newVersion}}"
         },
