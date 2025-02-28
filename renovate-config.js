@@ -2,7 +2,7 @@ module.exports = {
     gitAuthor: 'Renovate Bot <bot@renovateapp.com>',
     platform: 'github',
     repositories: [
-        "mega-backend"
+        "Gepardec/mega-backend"
         // "Gepardec/jboss-examples"
         // "Gepardec/renovate-playground"
     ],
