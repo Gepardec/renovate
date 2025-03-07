@@ -12,11 +12,11 @@ deactivate Renovate
 "Git Repository" -> Pipeline : new branch triggers Pipeline
 activate Pipeline
 
-Pipeline -> OpenRewrite : Pipeline runs OpenRewrite
-activate OpenRewrite
+Pipeline -> "Angular CLI" : Pipeline runs "ng update"
+activate "Angular CLI"
 
-OpenRewrite -> Pipeline : makes code changes
-deactivate OpenRewrite
+"Angular CLI" -> Pipeline : makes code changes
+deactivate "Angular CLI"
 
 Pipeline -> "Git Repository" : creates Pull Request
 
