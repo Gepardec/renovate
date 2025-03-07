@@ -1,5 +1,5 @@
 @startuml
-box A new Hope - success
+box Renovate schematically - success
 participant Developer
 
 participant Renovate
